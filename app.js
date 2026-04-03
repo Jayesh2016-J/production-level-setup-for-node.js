@@ -5,7 +5,12 @@ const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRouts');
 app.use(express.json());
 
-
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+app.get('/api/v1/health', (req, res) => {
+    res.send('OK');
+});
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/post', postRoutes)
 
