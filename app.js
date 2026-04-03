@@ -5,7 +5,9 @@ const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRouts');
 app.use(express.json());
 
-
+console.log("App is running");
+console.log("Mongo URL is ", process.env.MONGO_URL);
+console.log("PORT is ", process.env.PORT || 3000);
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/post', postRoutes)
 
