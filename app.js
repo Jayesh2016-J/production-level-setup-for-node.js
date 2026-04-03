@@ -11,6 +11,9 @@ app.get('/', (req, res) => {
 app.get('/api/v1/health', (req, res) => {
     res.send('OK');
 });
+app.get('/api/v1/ready', (req, res) => {
+    res.send('OK');
+});
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/post', postRoutes)
 
