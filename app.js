@@ -5,6 +5,15 @@ const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRouts');
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+app.get('/api/v1/health', (req, res) => {
+    res.send('OK');
+});
+app.get('/api/v1/ready', (req, res) => {
+    res.send('OK');
+});
 console.log("App is running");
 console.log("Mongo URL is ", process.env.MONGO_URL);
 console.log("PORT is ", process.env.PORT || 3000);
